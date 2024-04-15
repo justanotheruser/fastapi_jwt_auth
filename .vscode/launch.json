@@ -1,0 +1,45 @@
+{
+    // Используйте IntelliSense, чтобы узнать о возможных атрибутах.
+    // Наведите указатель мыши, чтобы просмотреть описания существующих атрибутов.
+    // Для получения дополнительной информации посетите: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "main",
+            "type": "debugpy",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "module": "uvicorn",
+            "args": [
+                "app.main:app",
+                "--reload",
+            ],
+            "console": "integratedTerminal",
+            "consoleTitle": "main",
+            "justMyCode": false
+        },
+        {
+            "name": "tests",
+            "type": "debugpy",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/app",
+            "python": "${workspaceFolder}/app/.venv/bin/python",
+            "module": "pytest",
+            "console": "integratedTerminal",
+            "consoleTitle": "tests",
+            "justMyCode": false
+        },
+        {
+            "name": "test_one",
+            "type": "debugpy",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/app",
+            "python": "${workspaceFolder}/app/.venv/bin/python",
+            "module": "pytest",
+            "args": ["tests/test_one.py"],
+            "console": "integratedTerminal",
+            "consoleTitle": "test_one",
+            "justMyCode": false
+        },
+    ]
+}
